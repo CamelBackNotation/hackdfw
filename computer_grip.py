@@ -1,17 +1,23 @@
 import sys
 import os
 
+def thumbs_up():
+    os.system("snake-solver")
+
+def placeholder():
+    print "Hello!"
+
 gestures = {
-            0 : "Rest",
-            1 : "Index?",
-            2 : "Fuck you!",
-            8 : "Thumbs down",
-            9 : "Thumbs UP"
+            0 : placeholder,
+            1 : placeholder,
+            2 : placeholder,
+            8 : placeholder,
+            9 : thumbs_up
             }
 
 def handle_pose(pose):
 
-    print gestures[pose]
+    gestures[pose]()
 
 
 

@@ -101,7 +101,7 @@ class Myo(MyoRaw):
 if __name__ == '__main__':
     import subprocess
     m = Myo(NNClassifier(), sys.argv[1] if len(sys.argv) >= 2 else None)
-    m.add_raw_pose_handler(lambda pose: myoOutput.handle_pose(pose))
+    m.add_raw_pose_handler(lambda pose: computer_grip.handle_pose(pose))
 
     def page(pose):
         if pose == 5:
