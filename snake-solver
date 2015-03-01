@@ -4,4 +4,4 @@ cd ~/Development/gamejam
 
 clear
 
-python start.py
+python start.py &
