@@ -1,26 +1,34 @@
 import sys
 import subprocess
 import os
+import webbrowser
 
-def spotify():
-    os.system("spotify")
+# Chrome - 2
+def open_palm():
+    url = "http://google.com"
+    webbrowser.open(url,new=2)
 
-def thumbs_up():
+# Snake Solver - 0
+def middle_finger():
     a = subprocess.check_output("pgrep -af python", shell=True)
     if not "start.py" in a:
-        os.system("spotify &")
+        os.system("snakesolver")
+
+# Spotify - 9
+def thumbs_up():
+    os.system("spotify &")
 
 
 def placeholder():
     print "Hello!"
 
 gestures = {
-            0 : placeholder,
-            1 : placeholder,
-            2 : spotify,
-            8 : placeholder,
-            9 : thumbs_up
-            }
+        0 : middle_finger,
+        1 : placeholder,
+        2 : open_palm,
+        8 : placeholder,
+        9 : thumbs_up
+    }
 
 def handle_pose(pose):
 
